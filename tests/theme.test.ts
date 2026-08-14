@@ -160,4 +160,13 @@ describe('browser demo', () => {
 		expect(demoSource).not.toContain('This panel reads only CSS custom properties');
 		expect(demoSource).not.toContain('class="lede"');
 	});
+
+	test('maps every picker token and uses contrast-safe dark accents', () => {
+		for (const token of ['active-bg', 'active-text', 'border', 'focus', 'hover', 'text']) {
+			expect(demoSource).toContain(`--wrn-theme-${token}`);
+		}
+		for (const accent of ['#2f7665', '#3f7a32', '#2563a0', '#8b5e2c', '#c2410c', '#1d4ed8', '#be185d']) {
+			expect(demoSource).toContain(`--accent: ${accent}`);
+		}
+	});
 });
