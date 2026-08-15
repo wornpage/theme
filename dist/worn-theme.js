@@ -2271,4 +2271,3 @@ customElements.define("worn-theme", Hr(ai, {
 	storageKey: { attribute: "storage-key" }
 }, [], []));
 //#endregion
-export { ai as default };
