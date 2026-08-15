@@ -1614,7 +1614,7 @@ function hr(e, t, n) {
 		}, !1);
 	}
 	if (s === 0) {
-		var l = r.length === 0 && n !== null;
+		var l = r.length === 0 && n !== null && e.pending.size === 0;
 		if (l) {
 			var u = n, d = u.parentNode;
 			$t(d), d.append(u), e.items.clear();
